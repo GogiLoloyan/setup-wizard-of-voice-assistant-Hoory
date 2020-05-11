@@ -1,0 +1,133 @@
+.account {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  &__nav {
+    @extend %flex-center-between;
+    padding: 1em 1.5em;
+    .user {
+      @extend %flex-center;
+      &__iamge-wrapper {
+        width: 3em;
+        height: 3em;
+        border-radius: 50%;
+        background-color: #9d9d9f;
+      }
+      &__iamge {
+      }
+      &__info {
+        margin-left: 0.7em;
+      }
+      &__full-name {
+        color: #444;
+        font-size: 1.2em;
+      }
+      &__email {
+        color: #9d9d9f;
+        font-size: 0.875em;
+      }
+    }
+    .logout {
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      @extend %flex-center;
+    }
+  }
+  &__content {
+    @extend %flex-center;
+    height: -webkit-fill-available;
+    .workspaces {
+      width: 423px;
+      .search-label {
+        width: 100%;
+        position: relative;
+        cursor: pointer;
+        &::before {
+          content: "";
+          position: absolute;
+          right: 0;
+          width: 9px;
+          height: 9px;
+          border-radius: 50%;
+          border: 2px solid #444;
+          //   cursor: pointer;
+        }
+        &::after {
+          content: "";
+          height: 2px;
+          width: 6px;
+          border-radius: 2px;
+          background: #444;
+          position: absolute;
+          right: 0;
+          transform: translate(-9px, -3px) rotate(-45deg);
+          //   cursor: pointer;
+        }
+      }
+      &__search {
+        width: 100%;
+        @extend %flex-center;
+        color: #444444;
+        font-size: 0.75em;
+        line-height: 0.875em;
+        background-color: #f7f7fa;
+      }
+      .workspace {
+        width: 100%;
+        @extend %flex-center-between;
+        position: relative;
+        .tools {
+          display: none;
+          position: absolute;
+          right: 0;
+          li {
+            @extend %flex-center;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background-color: white;
+            margin-left: 0.7em;
+            box-shadow: 0px 0px 15px 0px #00000011;
+            cursor: pointer;
+          }
+        }
+        .options {
+          z-index: 1000;
+          cursor: pointer;
+          div {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: #444;
+            margin: 2px 1em;
+          }
+        }
+        .checkbox {
+          position: relative;
+          display: none;
+        }
+        .checkbox:checked + ul {
+          display: flex;
+        }
+      }
+      .add-workspace {
+        @extend %flex-center;
+        width: 100%;
+        height: 100%;
+        color: #444;
+        cursor: pointer;
+      }
+    }
+  }
+  .input-background-wrapper {
+    @extend %flex-center;
+    width: 100%;
+    height: 60px;
+    background-color: #f7f7fa;
+    border-radius: 0.5em;
+    margin: 5px 0;
+    padding: 0 0.7em;
+    color: #9d9d9f;
+  }
+}

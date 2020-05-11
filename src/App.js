@@ -5,7 +5,6 @@ import { useSelector } from "react-redux";
 import Registration from "./components/Registration";
 import Login from "./components/registrationSteps/login/Login";
 import Account from "./components/registrationSteps/account/Account";
-import "./index.scss";
 // import PrivateRoute from "./routs/PrivateRoute";
 
 function App() {

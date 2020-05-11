@@ -1,8 +1,5 @@
 .page {
   font-family: "Roboto", sans-serif;
-  .page__body {
-    margin: 0;
-  }
 }
 
 * {
@@ -17,6 +14,9 @@
 @import "./styles/components/error.scss";
 @import "./styles/components/buttons.scss";
 @import "./styles/components/texts.scss";
+@import "./styles/components/common.scss";
+
+@import "./styles/variables.scss";
 
 .registration {
   display: flex;
@@ -34,3 +34,4 @@
 }
 
 @import "./styles/login.scss";
+@import "./styles/account.scss";

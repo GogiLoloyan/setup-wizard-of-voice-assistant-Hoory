@@ -1,8 +1,6 @@
 .login {
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %flex-center; 
   flex: 1;
 
   .login-form {

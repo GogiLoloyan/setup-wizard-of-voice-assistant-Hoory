@@ -22,7 +22,7 @@ function IconAndColorSchem() {
   const [gender, setGender] = useState(defaultGender);
   const [theme, setTheme] = useState(defaultTheme);
 
-  const getIcon = gen => {
+  const getIcon = (gen) => {
     switch (gen) {
       case "female":
         return gen === gender ? female_selected[theme] : female[theme];

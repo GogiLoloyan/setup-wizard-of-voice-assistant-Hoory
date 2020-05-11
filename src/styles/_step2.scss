@@ -1,8 +1,7 @@
 .styles-configuration {
   text-align: center;
   &__icons {
-    display: flex;
-    justify-content: center;
+    @extend %flex-center; 
     margin-top: 28px;
     margin-bottom: 50px;
     img {
@@ -10,8 +9,7 @@
     }
   }
   &__themes {
-    display: flex;
-    justify-content: space-between;
+    @extend %flex-center-between; 
     margin: 30px auto;
   }
   &__theme {

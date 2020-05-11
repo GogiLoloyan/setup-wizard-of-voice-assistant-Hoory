@@ -2,17 +2,12 @@ import React from "react";
 import { useSelector } from "react-redux";
 import StepWrapper from "../../../layout/StepWrapper";
 import Title from "../../common/Title";
-import { female, male } from "../../icon/logos/index";
 import Button from "../../common/Button";
+import { selectIconByParams } from "../../../utils/selectIconByParams";
 
 function Success() {
   const { name, gender, theme } = useSelector(store => store.voiceAssistant);
-  let icon;
-  if (gender === "female") {
-    icon = female[theme];
-  } else {
-    icon = male[theme];
-  }
+  const icon = selectIconByParams(gender, theme);
 
   return (
     <StepWrapper>
