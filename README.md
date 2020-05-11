@@ -1,4 +1,4 @@
-Demo [Setup wizard od voice assistant Hoory](https://hoory.netlify.app/)
+Demo [Setup wizard of voice assistant Hoory](https://hoory.netlify.app/)
 
 .
 .
