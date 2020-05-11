@@ -1,0 +1,36 @@
+.page {
+  font-family: "Roboto", sans-serif;
+  .page__body {
+    margin: 0;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+@import "./styles/components/button_google.scss";
+@import "./styles/components/error.scss";
+@import "./styles/components/buttons.scss";
+@import "./styles/components/texts.scss";
+
+.registration {
+  display: flex;
+  @import "./styles/leftBar.scss";
+  .step-window {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    @import "./styles/step1.scss";
+    @import "./styles/step2.scss";
+    @import "./styles/step3.scss";
+    @import "./styles/step4.scss";
+  }
+}
+
+@import "./styles/login.scss";

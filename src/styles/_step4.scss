@@ -1,0 +1,10 @@
+.success {
+  text-align: center;
+  &__icon {
+    margin: 0 0 10px 0;
+  }
+  &__text {
+    margin: 30px 0;
+    color: #444444;
+  }
+}

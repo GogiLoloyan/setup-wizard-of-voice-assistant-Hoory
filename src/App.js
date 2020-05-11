@@ -1,25 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Redirect } from "react-router-dom";
+import { useSelector } from "react-redux";
+
+import Registration from "./components/Registration";
+import Login from "./components/registrationSteps/login/Login";
+import Account from "./components/registrationSteps/account/Account";
+import "./index.scss";
+// import PrivateRoute from "./routs/PrivateRoute";
 
 function App() {
+  const { isAuthValue, logedIn } = useSelector(store => store.auth);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      {logedIn ? (
+        <>
+          <Redirect to="/account" /> <Account />
+        </>
+      ) : isAuthValue ? (
+        <>
+          <Redirect to="/login" /> <Login />
+        </>
+      ) : (
+        <Registration />
+      )}
+    </BrowserRouter>
   );
 }
 
