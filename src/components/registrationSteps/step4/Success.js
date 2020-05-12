@@ -3,19 +3,17 @@ import { useSelector } from "react-redux";
 import StepWrapper from "../../../layout/StepWrapper";
 import Title from "../../common/Title";
 import Button from "../../common/Button";
-import { selectIconByParams } from "../../../utils/selectIconByParams";
+import FemaleIcon from "../../icon/logos/FemaleIcon";
+import MaleIcon from "../../icon/logos/MaleIcon";
 
 function Success() {
-  const { name, gender, theme } = useSelector(store => store.voiceAssistant);
-  const icon = selectIconByParams(gender, theme);
-
+  const { name, gender, theme, themes } = useSelector(store => store.voiceAssistant);
+  const Icon = gender === "female" ? FemaleIcon : MaleIcon;
   return (
     <StepWrapper>
       {nextStep => (
         <div className="success">
-          <div className="success__icon">
-            <img src={icon} alt="icon" />
-          </div>
+          <Icon colors={themes[theme]} />
           <Title>Fantastico 🎉</Title>
           <p className="success__text">
             You have successfully setup the Hoory widget on your website!

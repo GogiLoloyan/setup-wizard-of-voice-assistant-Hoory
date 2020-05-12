@@ -9,41 +9,13 @@ const defaultState = {
   gender: "female",
   theme: 0,
   themes: [
-    {
-      "--theme-bg":
-        "linear-gradient(45deg, rgb(96, 11, 251) 0%, rgb(107, 84, 251) 100% )",
-      "--theme-border": "rgb(96, 11, 251)"
-    },
-    {
-      "--theme-bg":
-        "linear-gradient(45deg, rgb(180, 236, 81) 0%, rgb(66, 147, 33) 100%)",
-      "--theme-border": "rgb(180, 236, 81)"
-    },
-    {
-      "--theme-bg":
-        "linear-gradient(45deg, rgb(250, 217, 97) 0%, rgb(247, 107, 28) 100%)",
-      "--theme-border": "rgb(250, 217, 97)"
-    },
-    {
-      "--theme-bg":
-        "linear-gradient(45deg, rgb(245, 81, 95) 0%, rgb(159, 4, 27) 100%)",
-      "--theme-border": "rgb(245, 81, 95)"
-    },
-    {
-      "--theme-bg":
-        "linear-gradient(45deg, rgb(48, 35, 174) 0%, rgb(200, 109, 215) 100%)",
-      "--theme-border": "rgb(48, 35, 174)"
-    },
-    {
-      "--theme-bg":
-        "linear-gradient(45deg, rgb(113, 23, 234) 0%, rgb(234, 96, 96) 100%)",
-      "--theme-border": "rgb(113, 23, 234)"
-    },
-    {
-      "--theme-bg":
-        "linear-gradient(45deg, rgb(0, 99, 214) 0%, rgb(108, 212, 255) 100%)",
-      "--theme-border": "rgb(0, 99, 214)"
-    }
+    ["rgb(96, 11, 251)", "rgb(107, 84, 251)"],
+    ["rgb(180, 236, 81)", "rgb(66, 147, 33)"],
+    ["rgb(250, 217, 97)", "rgb(247, 107, 28)"],
+    ["rgb(245, 81, 95)", "rgb(159, 4, 27)"],
+    ["rgb(48, 35, 174)", "rgb(200, 109, 215)"],
+    ["rgb(113, 23, 234)", "rgb(234, 96, 96)"],
+    ["rgb(0, 99, 214)", "rgb(108, 212, 255)"]
   ]
 };
 

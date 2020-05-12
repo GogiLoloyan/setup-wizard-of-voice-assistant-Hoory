@@ -1,14 +1,20 @@
 import React from "react";
+import FemaleIcon from "../../../icon/logos/FemaleIcon";
+import MaleIcon from "../../../icon/logos/MaleIcon";
 
-function Icons({ getIcon, setGender }) {
+function Icons({ selectedGender, setGender, colors }) {
   return (
     <div className="styles-configuration__icons">
-      <img
-        src={getIcon("female")}
+      <FemaleIcon
+        colors={colors}
+        selected={selectedGender === "female"}
         onClick={() => setGender("female")}
-        alt="icon"
       />
-      <img src={getIcon("male")} onClick={() => setGender("male")} alt="icon" />
+      <MaleIcon
+        colors={colors}
+        selected={selectedGender === "male"}
+        onClick={() => setGender("male")}
+      />
     </div>
   );
 }

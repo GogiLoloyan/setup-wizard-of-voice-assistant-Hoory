@@ -6,7 +6,6 @@ import {
   setVoiceAssistantTheme
 } from "../../../actions/voiceAssistantActions";
 import StepWrapper from "../../../layout/StepWrapper";
-import { female, male, female_selected, male_selected } from "../../icon/logos";
 import Icons from "./components/Icons";
 import ColorTheme from "./components/ColorTheme";
 import Title from "../../common/Title";
@@ -21,16 +20,6 @@ function IconAndColorSchem() {
   } = useSelector(store => store.voiceAssistant);
   const [gender, setGender] = useState(defaultGender);
   const [theme, setTheme] = useState(defaultTheme);
-
-  const getIcon = (gen) => {
-    switch (gen) {
-      case "female":
-        return gen === gender ? female_selected[theme] : female[theme];
-      case "male":
-        return gen === gender ? male_selected[theme] : male[theme];
-      default:
-    }
-  };
 
   const handleSubmit = (e, nextStep, step) => {
     e.preventDefault();
@@ -47,9 +36,13 @@ function IconAndColorSchem() {
           onSubmit={e => handleSubmit(e, nextStep, 3)}
         >
           <Title>{`Select ${name}'s icon`}</Title>
-          <Icons getIcon={getIcon} setGender={setGender} />
+          <Icons
+            setGender={setGender}
+            selectedGender={gender}
+            colors={themes[theme]}
+          />
           <Title>Select color scheme</Title>
-          <ColorTheme theme={theme} themes={themes} setTheme={setTheme} />
+          <ColorTheme theme={theme} setTheme={setTheme} themes={themes} />
           <SubmitButton className="create-button">Next</SubmitButton>
         </form>
       )}
